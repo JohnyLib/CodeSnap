@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3d3d3d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Selection styling */
+::selection {
+    background-color: rgba(184, 115, 51, 0.3);
+    color: white;
+}
+
+/* Shimmer animation for progress bar */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 1.5s infinite;
+}
+
+/* Base styles */
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Monaco editor overrides */
+.monaco-editor {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Custom utilities */
+@layer utilities {
+    .text-gradient-bronze {
+        background: linear-gradient(135deg, #B87333 0%, #E0AF68 50%, #B87333 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .bg-gradient-subtle {
+        background: linear-gradient(180deg, #0B0B0B 0%, #151515 100%);
+    }
+
+    .border-gradient {
+        border: 1px solid transparent;
+        background: linear-gradient(#151515, #151515) padding-box,
+            linear-gradient(135deg, rgba(184, 115, 51, 0.3), rgba(184, 115, 51, 0.1)) border-box;
+    }
+}

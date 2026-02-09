@@ -1,0 +1,29 @@
+{
+  "name": "codesnippet",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "server/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:renderer": "npm run studio --workspace=apps/renderer",
+    "dev:api": "npm run dev --workspace=server/api",
+    "build": "npm run build --workspaces --if-present",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:renderer": "npm run build --workspace=apps/renderer",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "rimraf node_modules apps/*/node_modules packages/*/node_modules server/*/node_modules"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

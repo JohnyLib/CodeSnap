@@ -1,0 +1,28 @@
+{
+    "name": "@codesnippet/renderer",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "studio": "remotion studio",
+        "build": "remotion bundle",
+        "render": "remotion render CodeVideo out/video.mp4",
+        "render:webm": "remotion render CodeVideo out/video.webm --codec=vp8"
+    },
+    "dependencies": {
+        "@codesnippet/animations": "*",
+        "@codesnippet/themes": "*",
+        "@codesnippet/utils": "*",
+        "@remotion/bundler": "^4.0.186",
+        "@remotion/cli": "^4.0.186",
+        "@remotion/player": "^4.0.186",
+        "prism-react-renderer": "^2.3.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "remotion": "^4.0.186"
+    },
+    "devDependencies": {
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "typescript": "^5.4.0"
+    }
+}

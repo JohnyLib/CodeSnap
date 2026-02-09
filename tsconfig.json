@@ -1,0 +1,54 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": [
+            "ES2022",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "paths": {
+            "@codesnippet/themes": [
+                "./packages/themes/src/index.ts"
+            ],
+            "@codesnippet/animations": [
+                "./packages/animations/src/index.ts"
+            ],
+            "@codesnippet/utils": [
+                "./packages/utils/src/index.ts"
+            ]
+        }
+    },
+    "references": [
+        {
+            "path": "./apps/web"
+        },
+        {
+            "path": "./apps/renderer"
+        },
+        {
+            "path": "./packages/themes"
+        },
+        {
+            "path": "./packages/animations"
+        },
+        {
+            "path": "./packages/utils"
+        },
+        {
+            "path": "./server/api"
+        }
+    ]
+}
