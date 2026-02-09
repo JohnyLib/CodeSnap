@@ -5,7 +5,7 @@
  * Uses Remotion's useCurrentFrame for frame-based animation.
  */
 
-import { useCurrentFrame, interpolate } from 'remotion';
+import { useCurrentFrame } from 'remotion';
 import type { TypingAnimationConfig } from './types';
 
 export const defaultTypingConfig: TypingAnimationConfig = {
